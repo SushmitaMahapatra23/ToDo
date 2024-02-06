@@ -19,25 +19,16 @@ import org.junit.Assert
 import org.mockito.Mockito.*
 
 class ApplicationTest {
-
-    private val insertTablemock = mockk<insertInTable>()
     @Test
-    fun myfun()
-    {
-        assertEquals(3,3)
+    fun testRoot() = testApplication {
+
+        application{
+            configureRouting()
+        }
+        val response = client.get("/todo")
+        assertEquals(HttpStatusCode.OK, response.status)
+        assertEquals("Started todo", response.bodyAsText())
+
     }
-//    @Test
-//    fun `find a user by email`() = runBlocking {
-//
-//        val email = "sushmita@gmail.com"
-//        val user = User("sushmita@gmail.com","Sushmita","123")
-//        coEvery{
-//            insertTablemock.findUserByEmail(email)
-//        } returns user
-//
-//        val result =
-//            insertTablemock.findUserByEmail(email)
-//
-//        assertEquals(result,user)
-    }
+}
 
