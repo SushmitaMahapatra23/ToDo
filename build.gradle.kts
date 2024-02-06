@@ -8,7 +8,6 @@ val hikaricp_version: String by project
 plugins {
     kotlin("jvm") version "1.9.22"
     id("io.ktor.plugin") version "2.3.7"
-//    id("org.jetbrains.kotlinx.kover") version "0.7.5"
     id("jacoco")
 }
 
@@ -23,12 +22,6 @@ application {
 }
 
 
-//tasks.test {
-//    finalizedBy(tasks.jacocoTestReport) // report is always generated after tests run
-//}
-//tasks.jacocoTestReport {
-//    dependsOn(tasks.test) // tests are required to run before generating the report
-//}
 repositories {
     mavenCentral()
 }
