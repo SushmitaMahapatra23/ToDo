@@ -49,6 +49,7 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
         implementation("org.postgresql:postgresql:$postgresql_version")
     testImplementation("io.mockk:mockk:1.12.4")
+    implementation("io.lettuce:lettuce-core:6.2.3.RELEASE")
 }
 
 tasks.test {
