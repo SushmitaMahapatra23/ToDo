@@ -6,9 +6,15 @@ import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-
+import io.lettuce.core.*;
+import io.lettuce.core.api.sync.RedisCommands
 
 fun Route.UserRoutes(db:insertInTable){
+
+
+    val redisClient: RedisClient = RedisClient.create("redis://localhost:6379")
+    val redisCommands: RedisCommands<String,String> = redisClient.connect().sync()
+
 
     post("/adduser"){
         val formParameters = call.receiveParameters()
@@ -32,15 +38,20 @@ fun Route.UserRoutes(db:insertInTable){
 
     get("/showuser/{email}") {
       val email = call.parameters["email"].toString()
-
-
+        val cachedData = redisCommands.get("showuser:$email")
+        if(cachedData!=null)
+        {
+            call.respond(cachedData)
+        }
+        else {
             val user: User? = db.findUserByEmail(email)
             if (user != null) {
-
+                val todojson = "{\"email\":${user.email},\"name\": \"Aman\",\"password\": \"pihu35\"}"
+                redisCommands.set("showuser:$email",todojson)
                 call.respond(user)
             } else {
                 call.respond("User with mail id $email doesn't exists")
             }
         }
     }
-
+}
