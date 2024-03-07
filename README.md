@@ -12,7 +12,7 @@ gradle clean build
 ./gradlew jacocoTestReport
 ```
 
-
+mm
 **Second Method:-**
 Add following code in build.gradle.kts
 
@@ -41,5 +41,3 @@ docker exec -it some-redis
 ```
 redis-cli
 ```
-
-Made changes from nitro5
