@@ -27,7 +27,7 @@ tasks.jacocoTestReport {
 `Now, run cmd "gradle clean build", it will also generate jacocoreports
 `
 
-
+MAsxjxx
 
 jacocoReports are generated under build folder -> reports -> jacoco -> html -> index.html
 
@@ -42,4 +42,3 @@ docker exec -it some-redis
 redis-cli
 ```
 
-Sushmita Mahapatra
