@@ -31,4 +31,13 @@ tasks.jacocoTestReport {
 
 jacocoReports are generated under build folder -> reports -> jacoco -> html -> index.html
 
-
+### To install redis through docker run below commands in terminal
+```dockerfile
+docker run -d --name some-redis -p 6379:6379 redis
+```
+```
+docker exec -it some-redis
+```
+```
+redis-cli
+```
