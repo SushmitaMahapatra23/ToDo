@@ -42,4 +42,9 @@ docker exec -it some-redis
 redis-cli
 ```
 
-MAsxjxx
+
+
+
+dewddewdnedjed  ewjdnwedn ejkdnnd den
+=======
+
