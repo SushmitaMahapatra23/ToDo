@@ -27,7 +27,7 @@ tasks.jacocoTestReport {
 `Now, run cmd "gradle clean build", it will also generate jacocoreports
 `
 
-
+wdw
 
 jacocoReports are generated under build folder -> reports -> jacoco -> html -> index.html
 
