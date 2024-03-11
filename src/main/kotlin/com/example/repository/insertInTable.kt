@@ -115,4 +115,83 @@ class insertInTable {
             }.mapNotNull { rowToDos(it) }
 
         }
+
+        suspend fun findUserByEmail1(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+        suspend fun findUserByEmail2(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+
+        suspend fun findUserByEmail3(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+        suspend fun findUserByEmail4(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+
+        suspend fun findUserByEmail5(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+
+        suspend fun findUserByEmail6(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+
+        suspend fun findUserByEmail7(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+
+        suspend fun findUserByEmail8(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
+
+        suspend fun findUserByEmail9(email:String)
+     =
+        dbQuery {
+            UserTable.select{
+                UserTable.email.eq(email)
+            }.map { rowToUser(it) }
+                .singleOrNull()
+        }
 }
