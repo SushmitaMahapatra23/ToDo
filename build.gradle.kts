@@ -9,8 +9,16 @@ plugins {
     kotlin("jvm") version "1.9.22"
     id("io.ktor.plugin") version "2.3.7"
     id("jacoco")
+   id("org.sonarqube") version "4.4.1.3373"
 }
 
+sonar {
+  properties {
+    property("sonar.projectKey", "sushmitamahapatra23_todoapp")
+    property("sonar.organization", "sushmitamahapatra23")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
+}
 group = "com.example"
 version = "0.0.1"
 
